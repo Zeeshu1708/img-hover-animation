@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .containerPost {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            display: flex;
+            /* justify-content: center; */
+            overflow: hidden;
+            flex-wrap: wrap;
+            transform: translate(-10%, -40%);
+        }
+
+        .img {
+            width: 500px;
+            height: 500px;
+            transition: .3s;
+        }
+
+        .One {
+            z-index: -1;
+            transform: translateX(142px);
+            clip-path: polygon(50% 0, 65% 50%, 50% 100%, 0% 100%, 0 50%, 0 0);
+        }
+
+        .Two {
+            transform: translateX(-360px);
+            clip-path: polygon(100% 0, 100% 50%, 100% 100%, 50% 100%, 50% 100%, 65% 50%, 50% 0);
+        }
+
+        .text {
+            position: absolute;
+            right: 45%;
+            top: 25%;
+            width: 0;
+            height: 150px;
+            background: #fff;
+            transition: 2s ease;
+            box-shadow: 0 5px 3px rgb(0, 0, 0, .1);
+            overflow: hidden;
+            padding: 1rem .5rem;
+            padding-right: 2rem;
+        }
+
+        .text p {
+            color: var(--black);
+            margin: .5rem;
+            padding-right: 1.5rem;
+        }
+
+        .ccontainerPost:hover .One {
+            transform: translateX(100px);
+        }
+
+        .containerPost:hover .Two {
+            transform: translateX(-320px);
+        }
+
+        .containerPost:hover .text {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerPost">
+        <div class="text">
+            <h2>Image Heading</h2>
+            <p> <b>Image Description</b> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, libero? Lorem ipsum dolor sit amet?</p>
+        </div>
+        <div class="img One">   
+           <img src="Img.jpeg" width="100%" alt="">
+        </div>
+        <div class="img Two">
+            <img src="Img.jpeg" width="100%" alt="">            
+        </div>
+    </div>
+</body>
+
+</html>
